@@ -1,0 +1,137 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>MCD PR Creator</title>
+	<meta name="description" content="MCD PR Creator">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script>
+
+	function generateDescriptionForSprintTicket()
+	{
+		var textarea = document.getElementById('pr-markdown');
+		textarea.value = "";
+
+		// title
+		var pr_title = document.getElementById("pr-title").value;
+		if (pr_title != "")
+		{
+			textarea.value += "### " + pr_title + "\n";
+		}
+
+		// reference tickets
+		var pr_ticket = document.getElementById("pr-ticket").value;
+		if (pr_ticket != "")
+		{
+			textarea.value += "\n* Reference tickets: [" + pr_ticket + "]";
+		}
+
+		// pull request details
+		var pr_details = document.getElementById("pr-details").value;
+		if (pr_details != "")
+		{
+			textarea.value += "\n>" + pr_details;
+		}
+
+		// developer comments
+		var pr_devcomments = document.getElementById("pr-devcomments").value;
+		if (pr_devcomments != "")
+		{
+			textarea.value += "\n\n[//]: # (\n" + pr_devcomments + "\n)";
+		}
+	}
+
+	function generateDescriptionForBacklogTicket()
+	{
+		var textarea = document.getElementById('pr-markdown');
+		textarea.value = "[//]: # (";
+
+		// title
+		var pr_title = document.getElementById("pr-title").value;
+		if (pr_title != "")
+		{
+			textarea.value += "\n" + pr_title + "\n";
+		}
+
+		// reference tickets
+		var pr_ticket = document.getElementById("pr-ticket").value;
+		if (pr_ticket != "")
+		{
+			textarea.value += "\n* Reference tickets: [" + pr_ticket + "]";
+		}
+
+		// pull request details
+		var pr_details = document.getElementById("pr-details").value;
+		if (pr_details != "")
+		{
+			textarea.value += "\n>" + pr_details;
+		}
+
+		// developer comments
+		var pr_devcomments = document.getElementById("pr-devcomments").value;
+		if (pr_devcomments != "")
+		{
+			textarea.value += "\n\nNotes:\n" + pr_devcomments;
+		}
+
+		textarea.value = textarea.value + "\n)";
+	}
+
+	</script>
+</script>
+</head>
+<body>
+</br>
+<div style="width:50%; margin-left: auto; margin-right: auto;">
+	<h1>MCD PR Creator</h1>
+	<form id="frm">
+		<div class="form-group">
+			<label for="inputText">PR Title</label>
+			<input type="text" class="form-control" id="pr-title" placeholder="Pull request title">
+		</div>
+		<div class="form-group">
+			<label for="inputText">Ticket Number</label>
+			<input type="text" class="form-control" id="pr-ticket" placeholder="Jira ticket number. Ex: GMA-9999">
+		</div>
+		<div class="form-group">
+			<label for="inputText">Pull Request Details</label>
+			<textarea class="form-control" rows="3" id="pr-details" placeholder="Pull request details"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="inputText">Developer Comments</label>
+			<textarea class="form-control" rows="5" id="pr-devcomments" placeholder="PR Comments (Only visible to developers)"></textarea>
+		</div>
+
+		<label for="inputText">Generate the Pull Request Description for</label><br>
+		<button type="button" class="btn btn-primary" onclick="generateDescriptionForSprintTicket()">Sprint Ticket</button>
+		<button type="button" class="btn btn-primary" onclick="generateDescriptionForBacklogTicket()">Backlog Ticket</button>
+	</form>
+</br></br>
+<h2>Markdown PR</h2>
+<textarea class="form-control" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
+
+</div>
+</body>
+</html>
+
+
+<!--
+### Fixed some cool problem
+
+* Reference tickets [GMA-1323] [GMA-1423]
+
+> This was a problem that was super cool, but it has been fixed by doing some awesome thing.
+
+[//]: # (
+This is a developer only comment, this will be stripped from any documenation.
+It can contain as many lines as need.
+It ends with a close parenthese on it's own line.
+)
+-->

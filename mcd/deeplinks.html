@@ -1,0 +1,132 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>MCD Deep Links</title>
+	<meta name="description" content="MCD Deep Links">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div style="margin-left: auto; margin-right: auto;">
+
+	  <center>
+
+	  <h1>MCD Deeplinks</h1>
+
+	  <p>
+	  <b>Home Page</b><br>
+	  <a href="mcdmobileapp://home">mcdmobileapp://home</a>
+	  </p>
+
+	  <p>
+	  <b>Restaurant Locator</b><br>
+	  <a href="mcdmobileapp://store_locator">mcdmobileapp://store_locator</a>
+	  </p>
+
+	  <p>
+	  <b>Food Menu (Nutrition)</b><br>
+	  <a href="mcdmobileapp://nutritional_category">mcdmobileapp://nutritional_category</a>
+	  </p>
+
+	  <p>
+	  <b>Individual Food Item (Nutrition)</b><br>
+	  <a href="mcdmobileapp://nutrition_item?recipeId=200013">mcdmobileapp://nutrition_item?recipeId=200013</a> <i>(exists)</i><br>
+	  <a href="mcdmobileapp://nutrition_item?recipeId=54428">mcdmobileapp://nutrition_item?recipeId=54428</a> <i>(does'n exists)</i>
+	  </p>
+
+		<p>
+	  <b>Offer Details</b><br>
+	  <a href="mcdmobileapp://offer_detail?offerId=108253">mcdmobileapp://offer_detail?offerId=108253</a> (UK)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=107845">mcdmobileapp://offer_detail?offerId=107845</a> (UK)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=86561">mcdmobileapp://offer_detail?offerId=86561</a> (CN)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=86382">mcdmobileapp://offer_detail?offerId=86382</a> (CN)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=86203">mcdmobileapp://offer_detail?offerId=86203</a> (CN)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=85844">mcdmobileapp://offer_detail?offerId=85844</a> (CN)<br>
+		<a href="mcdmobileapp://offer_detail?offerId=99999">mcdmobileapp://offer_detail?offerId=9999</a> (doesn't exists)
+	  </p>
+
+	  <p>
+	  <b>Registration Page</b><br>
+	  <a href="mcdmobileapp://register">mcdmobileapp://register</a>
+	  </p>
+
+	  <p>
+	  <b>Sign In Page</b><br>
+	  <a href="mcdmobileapp://signin">mcdmobileapp://signin</a>
+	  </p>
+
+	  <p>
+	  <b>About McDonald's</b><br>
+	  <a href="mcdmobileapp://about_mcd">mcdmobileapp://about_mcd</a>
+	  </p>
+
+		<p>
+	  <b>OFYQ Page</b><br>
+	  <a href="mcdmobileapp://about_mcd/ofyq">mcdmobileapp://about_mcd/ofyq</a>
+	  </p>
+
+		<p>
+	  <b>Charity Page (RMHC)</b><br>
+	  <a href="mcdmobileapp://about_mcd/charity">mcdmobileapp://about_mcd/charity</a>
+	  </p>
+
+	  <p>
+	  <b>About the App</b><br>
+	  <a href="mcdmobileapp://about_app">mcdmobileapp://about_app</a>
+	  </p>
+
+	  <p>
+	  <b>Start an Order</b><br>
+	  <a href="mcdmobileapp://start_order">mcdmobileapp://start_order</a>
+	  </p>
+
+	  <p>
+	  <b>Account Settings</b><br>
+	  <a href="mcdmobileapp://account_settings">mcdmobileapp://account_settings</a>
+	  </p>
+
+	  <p>
+	  <b>External URLs</b><br>
+	  <a href="mcdmobileapp://external_link?url=http://www.example.com/foo">mcdmobileapp://external_link?url=http://www.example.com/foo</a> <i>(online)</i><br>
+	  <a href="mcdmobileapp://external_link?url=http://www.google.com.br">mcdmobileapp://external_link?url=http://www.google.com.br</a> <i>(online)</i><br>
+	  <a href="mcdmobileapp://external_link?url=http://www.thislinkisunavailable.com">mcdmobileapp://external_link?url=http://www.thislinkisunavailable.com</a> <i>(offline)</i>
+	  </p>
+
+		<p>
+	  <b>GMA Lite - Verify Email</b><br>
+	  <a href="mcdmobileapp://liteverifyemail">mcdmobileapp://liteverifyemail</a>
+	  </p>
+
+	  <p>
+	  <b>Invalid Link</b><br>
+	  <a href="mcdmobileapp://cagueited">mcdmobileapp://cagueited</a>
+	  </p>
+
+	  </center>
+	</div>
+
+</body>
+</html>
+
+
+<!--
+### Fixed some cool problem
+
+* Reference tickets [GMA-1323] [GMA-1423]
+
+> This was a problem that was super cool, but it has been fixed by doing some awesome thing.
+
+[//]: # (
+This is a developer only comment, this will be stripped from any documenation.
+It can contain as many lines as need.
+It ends with a close parenthese on it's own line.
+)
+-->
