@@ -3,8 +3,8 @@
         "apps": [],
         "details": [
             {
-                "appID": "5EUEY3M354.com.alissonselistre.gma.qa",
-                "paths": [ "/mcd/deeplink/*" ]
+                "appID": "8Y45PNPFW3.com.pontomobi.Sodexo",
+                "paths": [ "/sodexo/*" ]
             }
         ]
     }
