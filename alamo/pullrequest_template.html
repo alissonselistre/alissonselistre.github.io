@@ -1,9 +1,10 @@
 <!doctype html>
 <head>
 	<meta charset="utf-8">
-	<title>Alamo PR Creator</title>
-	<meta name="description" content="MCD PR Creator">
+	<title>Alamo PR Template</title>
+	<meta name="description" content="A helper to create the Alamo App pull requests">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
@@ -84,54 +85,115 @@
 		textarea.value = textarea.value + "\n)";
 	}
 
+	function generateMarkdown()
+	{
+		var textarea = document.getElementById('pr-markdown');
+		textarea.value = "";
+
+		var not_applicable_placeholder = "Not applicable";
+
+		// summary
+		textarea.value += "# Summary\n";
+		var pr_summary = document.getElementById("pr-summary").value;
+		if (pr_summary != "") {
+			textarea.value += pr_summary;
+		} else {
+			textarea.value += not_applicable_placeholder;
+		}
+		textarea.value += "\n\n";
+
+		// proposed solution
+		textarea.value += "# Proposed Solution\n";
+		var pr_solution = document.getElementById("pr-solution").value;
+		if (pr_solution != "") {
+			textarea.value += pr_solution;
+		} else {
+			textarea.value += not_applicable_placeholder;
+		}
+		textarea.value += "\n\n";
+
+		// impact
+		textarea.value += "# Impact\n";
+		var pr_impact = document.getElementById("pr-impact").value;
+		if (pr_impact != "") {
+			textarea.value += pr_impact;
+		} else {
+			textarea.value += not_applicable_placeholder;
+		}
+		textarea.value += "\n\n";
+
+		// tests
+		textarea.value += "# Tests\n";
+		var pr_tests = document.getElementById("pr-tests").value;
+		if (pr_tests != "") {
+			textarea.value += pr_tests;
+		} else {
+			textarea.value += not_applicable_placeholder;
+		}
+		textarea.value += "\n\n";
+
+		// reference
+		textarea.value += "# Reference\n";
+		var pr_reference = document.getElementById("pr-reference").value;
+		if (pr_reference != "") {
+			textarea.value += "[" + pr_reference + "](https://jira.ehi.com/browse/" + pr_reference + ")";
+		} else {
+			textarea.value += not_applicable_placeholder;
+		}
+	}
+
 	</script>
 </script>
 </head>
 <body>
 </br>
 <div style="width:50%; margin-left: auto; margin-right: auto;">
-	<h1>MCD PR Creator</h1>
+	<h1>Alamo PR Template</h1>
 	<form id="frm">
 		<div class="form-group">
-			<label for="inputText">PR Title</label>
-			<input type="text" class="form-control" id="pr-title" placeholder="Pull request title">
+			<label for="inputText">Summary</label>
+			<textarea class="form-control" rows="3" id="pr-summary" placeholder="Summarize the issue or feature."></textarea>
 		</div>
 		<div class="form-group">
-			<label for="inputText">Ticket Number</label>
-			<input type="text" class="form-control" id="pr-ticket" placeholder="Jira ticket number. Ex: GMA-9999">
+			<label for="inputText">Proposed Solution</label>
+			<textarea class="form-control" rows="5" id="pr-solution" placeholder="Describe the adopted solution."></textarea>
 		</div>
 		<div class="form-group">
-			<label for="inputText">Pull Request Details</label>
-			<textarea class="form-control" rows="3" id="pr-details" placeholder="Pull request details"></textarea>
+			<label for="inputText">Impact</label>
+			<textarea class="form-control" rows="3" id="pr-impact" placeholder="There is any impact?"></textarea>
 		</div>
 		<div class="form-group">
-			<label for="inputText">Developer Comments</label>
-			<textarea class="form-control" rows="5" id="pr-devcomments" placeholder="PR Comments (Only visible to developers)"></textarea>
+			<label for="inputText">Tests</label>
+			<textarea class="form-control" rows="3" id="pr-tests" placeholder="List of all related tests."></textarea>
+		</div>
+		<div class="form-group">
+			<label for="inputText">Reference</label>
+			<input type="text" class="form-control" id="pr-reference" placeholder="The JIRA Ticket. Ex: ALA-1234">
 		</div>
 
-		<label for="inputText">Generate the Pull Request Description for</label><br>
-		<button type="button" class="btn btn-primary" onclick="generateDescriptionForSprintTicket()">Sprint Ticket</button>
-		<button type="button" class="btn btn-primary" onclick="generateDescriptionForBacklogTicket()">Backlog Ticket</button>
+		<button type="button" class="btn btn-primary" onclick="generateMarkdown()">Generate the markdown</button>
 	</form>
 </br></br>
-<h2>Markdown PR</h2>
+<h2>PR Markdown</h2>
 <textarea class="form-control" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
 
 </div>
 </body>
 </html>
 
-
 <!--
-### Fixed some cool problem
+# Issue
 
-* Reference tickets [GMA-1323] [GMA-1423]
 
-> This was a problem that was super cool, but it has been fixed by doing some awesome thing.
+# Proposed Solution
 
-[//]: # (
-This is a developer only comment, this will be stripped from any documenation.
-It can contain as many lines as need.
-It ends with a close parenthese on it's own line.
-)
+
+# Impact
+
+
+# Tests
+
+
+# References
+[JIRA Ticket](https://jira.ehi.com/browse/[JIRA Ticket])
 -->
