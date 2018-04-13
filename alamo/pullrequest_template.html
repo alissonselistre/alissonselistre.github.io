@@ -4,7 +4,7 @@
 	<title>Alamo PR Template</title>
 	<meta name="description" content="A helper to create the Alamo App pull requests">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
@@ -15,105 +15,47 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 	<script>
 
-	function generateDescriptionForSprintTicket()
-	{
-		var textarea = document.getElementById('pr-markdown');
-		textarea.value = "";
-
-		// title
-		var pr_title = document.getElementById("pr-title").value;
-		if (pr_title != "")
-		{
-			textarea.value += "### " + pr_title + "\n";
-		}
-
-		// reference tickets
-		var pr_ticket = document.getElementById("pr-ticket").value;
-		if (pr_ticket != "")
-		{
-			textarea.value += "\n* Reference tickets: [" + pr_ticket + "]";
-		}
-
-		// pull request details
-		var pr_details = document.getElementById("pr-details").value;
-		if (pr_details != "")
-		{
-			textarea.value += "\n>" + pr_details;
-		}
-
-		// developer comments
-		var pr_devcomments = document.getElementById("pr-devcomments").value;
-		if (pr_devcomments != "")
-		{
-			textarea.value += "\n\n[//]: # (\n" + pr_devcomments + "\n)";
-		}
-	}
-
-	function generateDescriptionForBacklogTicket()
-	{
-		var textarea = document.getElementById('pr-markdown');
-		textarea.value = "[//]: # (";
-
-		// title
-		var pr_title = document.getElementById("pr-title").value;
-		if (pr_title != "")
-		{
-			textarea.value += "\n" + pr_title + "\n";
-		}
-
-		// reference tickets
-		var pr_ticket = document.getElementById("pr-ticket").value;
-		if (pr_ticket != "")
-		{
-			textarea.value += "\n* Reference tickets: [" + pr_ticket + "]";
-		}
-
-		// pull request details
-		var pr_details = document.getElementById("pr-details").value;
-		if (pr_details != "")
-		{
-			textarea.value += "\n>" + pr_details;
-		}
-
-		// developer comments
-		var pr_devcomments = document.getElementById("pr-devcomments").value;
-		if (pr_devcomments != "")
-		{
-			textarea.value += "\n\nNotes:\n" + pr_devcomments;
-		}
-
-		textarea.value = textarea.value + "\n)";
-	}
-
 	function generateMarkdown()
 	{
 		var textarea = document.getElementById('pr-markdown');
 		textarea.value = "";
 
 		var not_applicable_placeholder = "Not applicable";
+		var not_populated = "N/A";
+
+		// what this PR includes
+		textarea.value += "## This Pull Request includes\n";
+
+		var is_bugfix = document.getElementById("is-bugfix").checked;
+		textarea.value += "- [" + (is_bugfix ? "X" : " ") + "] Bug fix\n";
+
+		var is_feature = document.getElementById("is-feature").checked;
+		textarea.value += "- [" + (is_feature ? "X" : " ") + "] New feature";
+
+		textarea.value += "\n\n";
 
 		// summary
-		textarea.value += "# Summary\n";
+		textarea.value += "## Summary\n";
 		var pr_summary = document.getElementById("pr-summary").value;
 		if (pr_summary != "") {
 			textarea.value += pr_summary;
 		} else {
-			textarea.value += not_applicable_placeholder;
+			textarea.value += not_populated;
 		}
 		textarea.value += "\n\n";
 
 		// proposed solution
-		textarea.value += "# Proposed Solution\n";
+		textarea.value += "## Proposed Solution\n";
 		var pr_solution = document.getElementById("pr-solution").value;
 		if (pr_solution != "") {
 			textarea.value += pr_solution;
 		} else {
-			textarea.value += not_applicable_placeholder;
+			textarea.value += not_populated;
 		}
 		textarea.value += "\n\n";
 
 		// impact
-		textarea.value += "# Impact\n";
+		textarea.value += "## Impact\n";
 		var pr_impact = document.getElementById("pr-impact").value;
 		if (pr_impact != "") {
 			textarea.value += pr_impact;
@@ -123,7 +65,7 @@
 		textarea.value += "\n\n";
 
 		// tests
-		textarea.value += "# Tests\n";
+		textarea.value += "## Tests\n";
 		var pr_tests = document.getElementById("pr-tests").value;
 		if (pr_tests != "") {
 			textarea.value += pr_tests;
@@ -133,12 +75,12 @@
 		textarea.value += "\n\n";
 
 		// reference
-		textarea.value += "# Reference\n";
+		textarea.value += "## Reference\n";
 		var pr_reference = document.getElementById("pr-reference").value;
 		if (pr_reference != "") {
 			textarea.value += "[" + pr_reference + "](https://jira.ehi.com/browse/" + pr_reference + ")";
 		} else {
-			textarea.value += not_applicable_placeholder;
+			textarea.value += not_populated;
 		}
 	}
 
@@ -148,44 +90,84 @@
 <body>
 </br>
 <div style="width:50%; margin-left: auto; margin-right: auto;">
+
 	<h1>Alamo PR Template</h1>
+
+	</br>
+
 	<form id="frm">
+
+		<div class="form-group">
+  		<form>
+				<label>This Pull Request includes</label>
+    		<div class="checkbox">
+      		<label><input type="checkbox" id="is-bugfix" value="">Bug fix</label>
+    		</div>
+    		<div class="checkbox">
+      		<label><input type="checkbox" id="is-feature" value="">New feature</label>
+    		</div>
+  		</form>
+		</div>
+
+		</br>
+
 		<div class="form-group">
 			<label for="inputText">Summary</label>
 			<textarea class="form-control" rows="3" id="pr-summary" placeholder="Summarize the issue or feature."></textarea>
 		</div>
+
+		</br>
+
 		<div class="form-group">
 			<label for="inputText">Proposed Solution</label>
-			<textarea class="form-control" rows="5" id="pr-solution" placeholder="Describe the adopted solution."></textarea>
+			<textarea class="form-control" rows="3" id="pr-solution" placeholder="Describe the adopted solution."></textarea>
 		</div>
+
+		</br>
+
 		<div class="form-group">
 			<label for="inputText">Impact</label>
 			<textarea class="form-control" rows="3" id="pr-impact" placeholder="There is any impact?"></textarea>
 		</div>
+
+		</br>
+
 		<div class="form-group">
 			<label for="inputText">Tests</label>
 			<textarea class="form-control" rows="3" id="pr-tests" placeholder="List of all related tests."></textarea>
 		</div>
+
+		</br>
+
 		<div class="form-group">
 			<label for="inputText">Reference</label>
 			<input type="text" class="form-control" id="pr-reference" placeholder="The JIRA Ticket. Ex: ALA-1234">
 		</div>
 
+		</br>
+
 		<button type="button" class="btn btn-primary" onclick="generateMarkdown()">Generate the markdown</button>
+
 	</form>
-</br></br>
-<h2>PR Markdown</h2>
-<textarea class="form-control" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
+
+	</br></br>
+
+	<h2>PR Markdown</h2>
+	<textarea class="form-control" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
 
 </div>
 </body>
 </html>
 
 <!--
-# Issue
+# This Pull Request includes
+- [ ] Bug fix
+- [X] New feature
+
+# Summary
 
 
-# Proposed Solution
+# Changes
 
 
 # Impact
@@ -195,5 +177,5 @@
 
 
 # References
-[JIRA Ticket](https://jira.ehi.com/browse/[JIRA Ticket])
+[JIRA_Ticket](https://jira.ehi.com/browse/[JIRA_Ticket])
 -->
