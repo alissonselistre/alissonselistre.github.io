@@ -30,7 +30,10 @@
 		textarea.value += "- [" + (is_bugfix ? "X" : " ") + "] Bug fix\n";
 
 		var is_feature = document.getElementById("is-feature").checked;
-		textarea.value += "- [" + (is_feature ? "X" : " ") + "] New feature";
+		textarea.value += "- [" + (is_feature ? "X" : " ") + "] New feature\n";
+
+		var is_improvement = document.getElementById("is-improvement").checked;
+		textarea.value += "- [" + (is_improvement ? "X" : " ") + "] Improvement";
 
 		textarea.value += "\n\n";
 
@@ -105,6 +108,9 @@
     		</div>
     		<div class="checkbox">
       		<label><input type="checkbox" id="is-feature" value="">New feature</label>
+    		</div>
+				<div class="checkbox">
+      		<label><input type="checkbox" id="is-improvement" value="">Improvement</label>
     		</div>
   		</form>
 		</div>
