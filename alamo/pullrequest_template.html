@@ -17,6 +17,7 @@
 
 	function generateMarkdown()
 	{
+		var pr_markdown_title = document.getElementById('pr-markdown-title');
 		var textarea = document.getElementById('pr-markdown');
 		textarea.value = "";
 
@@ -68,6 +69,7 @@
 		textarea.value += "\n\n";
 
 		// tests
+		/*
 		textarea.value += "## Tests\n";
 		var pr_tests = document.getElementById("pr-tests").value;
 		if (pr_tests != "") {
@@ -76,6 +78,7 @@
 			textarea.value += not_applicable_placeholder;
 		}
 		textarea.value += "\n\n";
+		*/
 
 		// reference
 		textarea.value += "## Reference\n";
@@ -85,6 +88,10 @@
 		} else {
 			textarea.value += not_populated;
 		}
+
+		pr_markdown_title.style.display = "block";
+		textarea.style.display = "block";
+		textarea.scrollIntoView();
 	}
 
 	</script>
@@ -102,15 +109,15 @@
 
 		<div class="form-group">
   		<form>
-				<label>This Pull Request includes</label>
+			<label>This Pull Request includes</label>
     		<div class="checkbox">
-      		<label><input type="checkbox" id="is-bugfix" value="">Bug fix</label>
+      			<label><input type="checkbox" id="is-bugfix" value="">Bug fix</label>
     		</div>
     		<div class="checkbox">
-      		<label><input type="checkbox" id="is-feature" value="">New feature</label>
+      			<label><input type="checkbox" id="is-feature" value="">New feature</label>
     		</div>
-				<div class="checkbox">
-      		<label><input type="checkbox" id="is-improvement" value="">Improvement</label>
+			<div class="checkbox">
+      			<label><input type="checkbox" id="is-improvement" value="">Improvement</label>
     		</div>
   		</form>
 		</div>
@@ -138,7 +145,7 @@
 
 		</br>
 
-		<div class="form-group">
+		<div class="form-group" style="display: none">
 			<label for="inputText">Tests</label>
 			<textarea class="form-control" rows="3" id="pr-tests" placeholder="List of all related tests."></textarea>
 		</div>
@@ -158,8 +165,8 @@
 
 	</br></br>
 
-	<h2>PR Markdown</h2>
-	<textarea class="form-control" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
+	<h2 id="pr-markdown-title" style="display: none">PR Markdown</h2>
+	<textarea class="form-control" style="display: none" rows="20" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
 
 </div>
 </body>
