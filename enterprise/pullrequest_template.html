@@ -22,7 +22,7 @@
 		textarea.value = "";
 
 		var not_applicable_placeholder = "Not applicable";
-		var not_populated = "N/A";
+		var not_populated = "None.";
 
 		// what this PR includes
 		textarea.value += "## This Pull Request includes\n";
@@ -48,11 +48,11 @@
 		}
 		textarea.value += "\n\n";
 
-		// proposed solution
-		textarea.value += "## Proposed Solution\n";
-		var pr_solution = document.getElementById("pr-solution").value;
-		if (pr_solution != "") {
-			textarea.value += pr_solution;
+		// changes
+		textarea.value += "## Changes\n";
+		var pr_changes = document.getElementById("pr-changes").value;
+		if (pr_changes != "") {
+			textarea.value += pr_changes;
 		} else {
 			textarea.value += not_populated;
 		}
@@ -69,7 +69,6 @@
 		textarea.value += "\n\n";
 
 		// tests
-		/*
 		textarea.value += "## Tests\n";
 		var pr_tests = document.getElementById("pr-tests").value;
 		if (pr_tests != "") {
@@ -78,13 +77,12 @@
 			textarea.value += not_applicable_placeholder;
 		}
 		textarea.value += "\n\n";
-		*/
 
-		// reference
-		textarea.value += "## Reference\n";
-		var pr_reference = document.getElementById("pr-reference").value;
-		if (pr_reference != "") {
-			textarea.value += "[" + pr_reference + "](https://jira.ehi.com/browse/" + pr_reference + ")";
+		// references
+		textarea.value += "## References\n";
+		var pr_references = document.getElementById("pr-references").value;
+		if (pr_references != "") {
+			textarea.value += "[JIRA Ticket](https://jira.ehi.com/browse/" + pr_references + ")";
 		} else {
 			textarea.value += not_populated;
 		}
@@ -126,21 +124,21 @@
 
 		<div class="form-group">
 			<label for="inputText">Summary</label>
-			<textarea class="form-control" rows="3" id="pr-summary" placeholder="Summarize the issue or feature."></textarea>
+			<textarea class="form-control" rows="3" id="pr-summary" placeholder="Summarize the issue, feature or improvement."></textarea>
 		</div>
 
 		</br>
 
 		<div class="form-group">
-			<label for="inputText">Proposed Solution</label>
-			<textarea class="form-control" rows="3" id="pr-solution" placeholder="Describe the adopted solution."></textarea>
+			<label for="inputText">Changes</label>
+			<textarea class="form-control" rows="3" id="pr-changes" placeholder="Describe the needed changes."></textarea>
 		</div>
 
 		</br>
 
 		<div class="form-group">
 			<label for="inputText">Impact</label>
-			<textarea class="form-control" rows="3" id="pr-impact" placeholder="There is any impact?"></textarea>
+			<textarea class="form-control" rows="3" id="pr-impact" placeholder="Is there any impact?"></textarea>
 		</div>
 
 		</br>
@@ -153,8 +151,8 @@
 		</br>
 
 		<div class="form-group">
-			<label for="inputText">Reference</label>
-			<input type="text" class="form-control" id="pr-reference" placeholder="The JIRA Ticket. Ex: ALA-1234">
+			<label for="inputText">References</label>
+			<input type="text" class="form-control" id="pr-references" placeholder="The JIRA Ticket. Ex: EA-1234">
 		</div>
 
 		</br>
@@ -179,15 +177,11 @@
 
 # Summary
 
-
 # Changes
-
 
 # Impact
 
-
 # Tests
-
 
 # References
 [JIRA_Ticket](https://jira.ehi.com/browse/[JIRA_Ticket])
