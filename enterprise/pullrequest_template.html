@@ -25,7 +25,7 @@
 		var not_populated = "None.";
 
 		// what this PR includes
-		textarea.value += "## This Pull Request includes\n";
+		textarea.value += "# This Pull Request includes\n";
 
 		var is_bugfix = document.getElementById("is-bugfix").checked;
 		textarea.value += "- [" + (is_bugfix ? "X" : " ") + "] Bug fix\n";
@@ -39,7 +39,7 @@
 		textarea.value += "\n\n";
 
 		// summary
-		textarea.value += "## Summary\n";
+		textarea.value += "# Summary\n";
 		var pr_summary = document.getElementById("pr-summary").value;
 		if (pr_summary != "") {
 			textarea.value += pr_summary;
@@ -49,7 +49,7 @@
 		textarea.value += "\n\n";
 
 		// changes
-		textarea.value += "## Changes\n";
+		textarea.value += "# Changes\n";
 		var pr_changes = document.getElementById("pr-changes").value;
 		if (pr_changes != "") {
 			textarea.value += pr_changes;
@@ -59,17 +59,17 @@
 		textarea.value += "\n\n";
 
 		// impact
-		textarea.value += "## Impact\n";
+		textarea.value += "# Impact\n";
 		var pr_impact = document.getElementById("pr-impact").value;
 		if (pr_impact != "") {
 			textarea.value += pr_impact;
 		} else {
-			textarea.value += not_applicable_placeholder;
+			textarea.value += not_populated;
 		}
 		textarea.value += "\n\n";
 
 		// tests
-		textarea.value += "## Tests\n";
+		textarea.value += "# Tests\n";
 		var pr_tests = document.getElementById("pr-tests").value;
 		if (pr_tests != "") {
 			textarea.value += pr_tests;
@@ -79,7 +79,7 @@
 		textarea.value += "\n\n";
 
 		// references
-		textarea.value += "## References\n";
+		textarea.value += "# References\n";
 		var pr_references = document.getElementById("pr-references").value;
 		if (pr_references != "") {
 			textarea.value += "[JIRA Ticket](https://jira.ehi.com/browse/" + pr_references + ")";
