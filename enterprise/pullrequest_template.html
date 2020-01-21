@@ -72,6 +72,12 @@
 			var storedValue = storedReferences[i];
 			pr_reference_input.value = storedValue && storedValue.length ? storedValue : "";
 		}
+
+		// focus the last one
+		if (referencesCount > 1) {
+			var last_reference_input = pr_references_list.lastChild;
+			last_reference_input.focus();
+		}
 	}
 
 	function generateMarkdown()
