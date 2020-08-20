@@ -21,25 +21,16 @@
 		var textarea = document.getElementById('pr-markdown');
 		textarea.value = "";
 
-		var not_applicable_placeholder = "Not applicable";
+		var not_applicable_placeholder = "Not applicable / Not available";
 		var not_populated = "N/A";
 
 		// what this PR includes
 		textarea.value += "## This Pull Request includes\n";
 
-		var is_bugfix = document.getElementById("is-bugfix").checked;
-		textarea.value += "- [" + (is_bugfix ? "X" : " ") + "] Bug fix\n";
-
-		var is_feature = document.getElementById("is-feature").checked;
-		textarea.value += "- [" + (is_feature ? "X" : " ") + "] New feature\n";
-
-		var is_improvement = document.getElementById("is-improvement").checked;
-		textarea.value += "- [" + (is_improvement ? "X" : " ") + "] Improvement";
-
 		textarea.value += "\n\n";
 
 		// summary
-		textarea.value += "## Summary\n";
+		textarea.value += "## Issue Summary\n";
 		var pr_summary = document.getElementById("pr-summary").value;
 		if (pr_summary != "") {
 			textarea.value += pr_summary;
@@ -58,36 +49,20 @@
 		}
 		textarea.value += "\n\n";
 
-		// impact
-		textarea.value += "## Impact\n";
-		var pr_impact = document.getElementById("pr-impact").value;
-		if (pr_impact != "") {
-			textarea.value += pr_impact;
+		// steps to reproduce
+		textarea.value += "## Steps to reproduce\n";
+		var pr_steps = document.getElementById("pr-steps").value;
+		if (pr_steps != "") {
+			textarea.value += pr_steps;
 		} else {
 			textarea.value += not_applicable_placeholder;
 		}
 		textarea.value += "\n\n";
-
-		// tests
-		/*
-		textarea.value += "## Tests\n";
-		var pr_tests = document.getElementById("pr-tests").value;
-		if (pr_tests != "") {
-			textarea.value += pr_tests;
-		} else {
-			textarea.value += not_applicable_placeholder;
-		}
+        
+        // screenshots
+		textarea.value += "## Screenshots\n";
+        textarea.value += not_applicable_placeholder;
 		textarea.value += "\n\n";
-		*/
-
-		// reference
-		textarea.value += "## Reference\n";
-		var pr_reference = document.getElementById("pr-reference").value;
-		if (pr_reference != "") {
-			textarea.value += "[" + pr_reference + "](https://jira.ehi.com/browse/" + pr_reference + ")";
-		} else {
-			textarea.value += not_populated;
-		}
 
 		pr_markdown_title.style.display = "block";
 		textarea.style.display = "block";
@@ -106,26 +81,10 @@
 	</br>
 
 	<form id="frm">
-
-		<div class="form-group">
-  		<form>
-			<label>This Pull Request includes</label>
-    		<div class="checkbox">
-      			<label><input type="checkbox" id="is-bugfix" value="">Bug fix</label>
-    		</div>
-    		<div class="checkbox">
-      			<label><input type="checkbox" id="is-feature" value="">New feature</label>
-    		</div>
-			<div class="checkbox">
-      			<label><input type="checkbox" id="is-improvement" value="">Improvement</label>
-    		</div>
-  		</form>
-		</div>
-
 		</br>
 
 		<div class="form-group">
-			<label for="inputText">Summary</label>
+			<label for="inputText">Issue Summary</label>
 			<textarea class="form-control" rows="3" id="pr-summary" placeholder="Summarize the issue or feature."></textarea>
 		</div>
 
@@ -139,23 +98,11 @@
 		</br>
 
 		<div class="form-group">
-			<label for="inputText">Impact</label>
-			<textarea class="form-control" rows="3" id="pr-impact" placeholder="There is any impact?"></textarea>
+			<label for="inputText">Steps to Reproduce</label>
+			<textarea class="form-control" rows="3" id="pr-steps" placeholder="Describe how to reproduce the issue"></textarea>
 		</div>
 
 		</br>
-
-		<div class="form-group" style="display: none">
-			<label for="inputText">Tests</label>
-			<textarea class="form-control" rows="3" id="pr-tests" placeholder="List of all related tests."></textarea>
-		</div>
-
-		</br>
-
-		<div class="form-group">
-			<label for="inputText">Reference</label>
-			<input type="text" class="form-control" id="pr-reference" placeholder="The JIRA Ticket. Ex: ALA-1234">
-		</div>
 
 		</br>
 
