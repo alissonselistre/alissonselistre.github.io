@@ -43,7 +43,7 @@
 
 .content .cardLogoHolder {
 	display: block;
-	margin-bottom: 1.25rem
+	margin-bottom: 1.25rem;
 }
 
 .content .holder,
@@ -247,6 +247,7 @@
 	margin: 0 0 0 0;
 }
 
-.cardLogoHolder {
-	opacity: 0.6
+.content .cardLogoHolder .cardLogo,
+.content .cardLogoHolder #securityLogoHolder .cardLogo {
+	height: 1.25rem;
 }
