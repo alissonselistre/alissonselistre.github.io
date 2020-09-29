@@ -1,11 +1,11 @@
-/* line 424, src/scss/helpers/_icons.scss */
+/* line 436, src/scss/helpers/_icons.scss */
 
 .content .cardCvCHolder .cvcInfoLink:hover {
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMuMzMzIiBoZWlnaHQ9IjUzLjMzMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGQ9Ik0wIDQwaDQwVjBIMHY0MHoiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIHI9IjIxLjU3IiBjeT0iMjYuMzU3IiBjeD0iMjYuNzU3IiBmaWxsPSIjMTY5YTVhIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMyAwIDAgLTEuMzMzIDAgNTMuMzMzKSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIxLjc1MiAxMi44NGMtLjQ5MiAwLS44NC4wOC0xLjAzOC4yNDItLjIuMTYzLS4yOTguNDY2LS4yOTguOTE0IDAgLjE3OC4wMjguNDQuMDkuNzg3LjA2LjM0Ny4xMzIuNjU4LjIwOC45M2wuOTUgMy4zNjdjLjA5LjMxLjE1Ny42NS4xOTIgMS4wMi4wMzQuMzcyLjA1Mi42My4wNTIuNzc2IDAgLjcxLS4yNSAxLjI4Ny0uNzQ4IDEuNzMtLjQ5NC40NDUtMS4yMDMuNjY4LTIuMTIuNjY4LS41MSAwLTEuMDU0LS4wNzUtMS42MjMtLjI3Mi0xLjExNC0uMzktLjg2Ny0xLjM2Mi0uNjItMS4zNjIuNTAzIDAgLjg0LS4wODYgMS4wMTgtLjI1Ni4xNzgtLjE2OC4yNy0uNDcuMjctLjkwMiAwLS4yMzgtLjAzMy0uNTA1LS4wOS0uNzkzLS4wNTgtLjI5LS4xMjctLjU5OC0uMjEzLS45MmwtLjk1Ny0zLjM4M2ExMi43MSAxMi43MSAwIDAgMS0uMTgzLS45NTYgNi4xNiA2LjE2IDAgMCAxLS4wNTYtLjgyOGMwLS42OTQuMjU1LTEuMjY2Ljc2Ny0xLjcyLjUxMy0uNDUzIDEuMy0uODczIDIuMjI0LS44NzMuNiAwIDEuNDU2LjIyMyAyLjE1LjU1LjguMzc0IDEuMjIzIDEuMDc4LjgwOCAxLjQtLjI0LjE4Ni0uNTU0LS4xMi0uNzgzLS4xMm0tLjYwNCAxNi4xNTFjLS42MjIgMC0xLjE2LS4yMS0xLjYwNy0uNjI1LS40NDItLjQxNy0uNjY3LS45MTgtLjY2Ny0xLjUwNCAwLS41ODcuMjI1LTEuMDg4LjY2OC0xLjUuNDQ4LS40MTMuOTg2LS42MiAxLjYwOC0uNjJhMi4yNiAyLjI2IDAgMCAxIDEuNi42MmMuNDQ0LjQxMi42NjYuOTEzLjY2NiAxLjVzLS4yMjIgMS4wODgtLjY2NiAxLjUwNWEyLjI1NSAyLjI1NSAwIDAgMS0xLjYuNjI2Ii8+PHBhdGggZmlsbD0iIzE2OWE1YSIgZD0iTTIwIDVDMTEuNzMgNSA1IDExLjczIDUgMjBzNi43MyAxNSAxNSAxNSAxNS02LjczIDE1LTE1UzI4LjI3IDUgMjAgNW0wIDMyYy05LjM3NCAwLTE3LTcuNjI2LTE3LTE3IDAtOS4zNzQgNy42MjYtMTcgMTctMTcgOS4zNzQgMCAxNyA3LjYyNiAxNyAxNyAwIDkuMzc0LTcuNjI2IDE3LTE3IDE3Ii8+PC9nPjwvc3ZnPg==)
 }
 
 
-/* line 424, src/scss/helpers/_icons.scss */
+/* line 436, src/scss/helpers/_icons.scss */
 
 .content .cardCvCHolder .cvcInfoLink {
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNTMuMzMzIiB3aWR0aD0iNTMuMzMzIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGQ9Ik0wIDQwaDQwVjBIMHoiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjYSkiIHRyYW5zZm9ybT0ibWF0cml4KDEuMzMzIDAgMCAtMS4zMzMgMCA1My4zMzMpIiBmaWxsPSIjMTY5YTVhIj48cGF0aCBkPSJNMjEuNzUyIDEyLjg0Yy0uNDkyIDAtLjg0LjA4LTEuMDM4LjI0Mi0uMi4xNjMtLjI5OC40NjYtLjI5OC45MTQgMCAuMTc4LjAyOC40NC4wOS43ODcuMDYuMzQ3LjEzMi42NTguMjA4LjkzbC45NSAzLjM2N2MuMDkuMzEuMTU3LjY1LjE5MiAxLjAyLjAzNC4zNzIuMDUyLjYzLjA1Mi43NzYgMCAuNzEtLjI1IDEuMjg3LS43NDggMS43My0uNDk0LjQ0NS0xLjIwMy42NjgtMi4xMi42NjgtLjUxIDAtMS4wNTQtLjA3NS0xLjYyMy0uMjcyLTEuMTE0LS4zOS0uODY3LTEuMzYyLS42Mi0xLjM2Mi41MDMgMCAuODQtLjA4NiAxLjAxOC0uMjU2LjE3OC0uMTY4LjI3LS40Ny4yNy0uOTAyIDAtLjIzOC0uMDMzLS41MDUtLjA5LS43OTMtLjA1OC0uMjktLjEyNy0uNTk4LS4yMTMtLjkybC0uOTU3LTMuMzgzYTEyLjcxIDEyLjcxIDAgMCAxLS4xODMtLjk1NiA2LjE2IDYuMTYgMCAwIDEtLjA1Ni0uODI4YzAtLjY5NC4yNTUtMS4yNjYuNzY3LTEuNzIuNTEzLS40NTMgMS4zLS44NzMgMi4yMjQtLjg3My42IDAgMS40NTYuMjIzIDIuMTUuNTUuOC4zNzQgMS4yMjMgMS4wNzguODA4IDEuNC0uMjQuMTg2LS41NTQtLjEyLS43ODMtLjEybS0uNjA0IDE2LjE1MWMtLjYyMiAwLTEuMTYtLjIxLTEuNjA3LS42MjUtLjQ0Mi0uNDE3LS42NjctLjkxOC0uNjY3LTEuNTA0IDAtLjU4Ny4yMjUtMS4wODguNjY4LTEuNS40NDgtLjQxMy45ODYtLjYyIDEuNjA4LS42MmEyLjI2IDIuMjYgMCAwIDEgMS42LjYyYy40NDQuNDEyLjY2Ni45MTMuNjY2IDEuNXMtLjIyMiAxLjA4OC0uNjY2IDEuNTA1YTIuMjU1IDIuMjU1IDAgMCAxLTEuNi42MjYiLz48cGF0aCBkPSJNMjAgNUMxMS43MyA1IDUgMTEuNzMgNSAyMHM2LjczIDE1IDE1IDE1IDE1LTYuNzMgMTUtMTVTMjguMjcgNSAyMCA1bTAgMzJjLTkuMzc0IDAtMTctNy42MjYtMTctMTcgMC05LjM3NCA3LjYyNi0xNyAxNy0xNyA5LjM3NCAwIDE3IDcuNjI2IDE3IDE3IDAgOS4zNzQtNy42MjYgMTctMTcgMTciLz48L2c+PC9zdmc+)
@@ -51,6 +51,13 @@
 
 /* line 28, src/scss/ibmHostedWalletAddPayment.scss */
 
+.instrument:not(.saved) .content {
+	padding: 0
+}
+
+
+/* line 32, src/scss/ibmHostedWalletAddPayment.scss */
+
 .content {
 	display: -ms-flexbox;
 	display: flex;
@@ -61,31 +68,70 @@
 }
 
 
-/* line 33, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 37, src/scss/ibmHostedWalletAddPayment.scss */
 
-.content .cardLogoHolder {
-	display: block;
-	margin-bottom: 1.25rem
-}
-
-
-/* line 38, src/scss/ibmHostedWalletAddPayment.scss */
-
-.content .holder,
-.content .zipCodeHolder,
-.content .buttonHolder {
-	width: 100%
+.content .cardLogoHolder,
+.content #securityLogoHolder {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%
 }
 
 
 /* line 44, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .cardLogoHolder {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-bottom: 1.25rem
+}
+
+
+/* line 48, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .cardLogoHolder .cardLogo {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	height: 2.5rem !important
+}
+
+
+/* line 54, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content #securityLogoHolder .cardLogo:last-of-type {
+	margin-right: 0
+}
+
+
+/* line 58, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .holder,
+.content .zipCodeHolder,
+.content .nameOnCardHolder,
+.content .buttonHolder,
+.content .recaptchaContainer {
+	width: 100%
+}
+
+
+/* line 66, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .recaptchaContainer {
+	margin-bottom: 1.5625rem
+}
+
+
+/* line 70, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .holder.cardCvCHolder {
 	margin-bottom: 0
 }
 
 
-/* line 48, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 74, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer {
 	display: block;
@@ -97,7 +143,7 @@
 }
 
 
-/* line 56, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 82, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer .labelContainer,
 .content .inputContainer.filled.animated .labelContainer {
@@ -107,7 +153,7 @@
 }
 
 
-/* line 63, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 89, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer .labelContainer label,
 .content .inputContainer.animated .labelContainer label {
@@ -122,18 +168,8 @@
 }
 
 
-/* line 73, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 100, src/scss/ibmHostedWalletAddPayment.scss */
 
-.content .inputContainer .labelContainer label::after,
-.content .inputContainer.animated .labelContainer label::after {
-	content: ' *'
-}
-
-
-/* line 78, src/scss/ibmHostedWalletAddPayment.scss */
-
-.content .inputContainer.error:after,
-.content .inputContainer.error:before,
 .content .inputContainer.valid:after {
 	bottom: 1.125rem;
 	right: .625rem;
@@ -141,14 +177,29 @@
 }
 
 
-/* line 86, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 107, src/scss/ibmHostedWalletAddPayment.scss */
 
-.content .inputContainer.error input:focus {
-	border: 1px solid red
+.content .inputContainer.error::after,
+.content .inputContainer.error::before {
+	display: none
 }
 
 
-/* line 90, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 112, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .inputContainer.error input {
+	border: .125rem solid #fec621
+}
+
+
+/* line 115, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .inputContainer.error input:focus {
+	border-width: 1px
+}
+
+
+/* line 121, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer input {
 	padding: .625rem;
@@ -158,15 +209,15 @@
 }
 
 
-/* line 96, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 127, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer input:focus {
 	border-color: #169a5a;
-	outline: none
+	outline: .125rem solid #a4ceff
 }
 
 
-/* line 102, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 133, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer .placeHolderLabel {
 	visibility: visible !important;
@@ -179,14 +230,14 @@
 }
 
 
-/* line 112, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 143, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer.filled .placeHolderLabel {
 	display: none
 }
 
 
-/* line 116, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 147, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .inputContainer+.errorMsg {
 	bottom: 100%;
@@ -195,14 +246,14 @@
 }
 
 
-/* line 123, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 154, src/scss/ibmHostedWalletAddPayment.scss */
 
-.content .inputContainer .cvcInput.valid~.cvcInfoLinkHolder {
+.content .inputContainer.cvcInput.valid~.cvcInfoLinkHolder {
 	display: block
 }
 
 
-/* line 128, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 159, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .cardCvCHolder .cvcInfoLink {
 	background-size: cover;
@@ -213,14 +264,14 @@
 }
 
 
-/* line 141, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 172, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .buttonHolder {
 	margin-top: 0
 }
 
 
-/* line 144, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 175, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .buttonHolder .commandButton {
 	font-weight: 600;
@@ -235,42 +286,76 @@
 	font-size: .875rem;
 	text-transform: uppercase;
 	line-height: normal;
-	transition: background-color 0.3s
+	transition: background-color 0.3s;
+	-webkit-appearance: none;
+	-moz-appearance: none
 }
 
 
-/* line 158, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 192, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .buttonHolder .commandButton:hover {
 	background-color: #15804d
 }
 
 
-/* line 162, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 196, src/scss/ibmHostedWalletAddPayment.scss */
 
 .content .buttonHolder .commandButton:focus {
 	outline: .125rem solid #a4ceff;
 	outline-offset: -.125rem
 }
 
+
+/* line 203, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content .paymentError.error {
+	font-weight: 300;
+	font-style: normal;
+	font-size: .875rem;
+	line-height: 1.3125rem;
+	border: 0;
+	background-color: #f6db00;
+	color: #181918;
+	text-align: left;
+	border-radius: 0;
+	padding: .3125rem .9375rem;
+	margin-bottom: 1.5625rem
+}
+
+
+/* line 217, src/scss/ibmHostedWalletAddPayment.scss */
+
+.content br {
+	display: none
+}
+
 @media (min-width: 29.8125em) {
-	/* line 170, src/scss/ibmHostedWalletAddPayment.scss */
+	/* line 222, src/scss/ibmHostedWalletAddPayment.scss */
+	.content .cardLogoHolder #securityLogoHolder {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		margin-left: auto;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto
+	}
+	/* line 228, src/scss/ibmHostedWalletAddPayment.scss */
 	.content .expiryDateHolder,
 	.content .cardCvCHolder,
 	.content .zipCodeHolder {
 		width: calc(50% - .9375rem);
 		margin-right: 0
 	}
-	/* line 177, src/scss/ibmHostedWalletAddPayment.scss */
+	/* line 235, src/scss/ibmHostedWalletAddPayment.scss */
 	.content .expiryDateHolder {
 		margin-right: auto
 	}
-	/* line 181, src/scss/ibmHostedWalletAddPayment.scss */
+	/* line 239, src/scss/ibmHostedWalletAddPayment.scss */
 	.content .buttonHolder {
 		margin-top: 1.25rem;
 		text-align: right
 	}
-	/* line 185, src/scss/ibmHostedWalletAddPayment.scss */
+	/* line 243, src/scss/ibmHostedWalletAddPayment.scss */
 	.content .buttonHolder .commandButton {
 		height: auto;
 		width: auto;
@@ -279,7 +364,7 @@
 }
 
 
-/* line 194, src/scss/ibmHostedWalletAddPayment.scss */
+/* line 252, src/scss/ibmHostedWalletAddPayment.scss */
 
 #doneForm .cancelButton {
 	display: none
