@@ -1,0 +1,194 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>EHI Pull Request Template</title>
+	<meta name="description" content="A helper to create the description for the pull requests of the EHI Mobile Apps">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script>
+
+	function generateMarkdown()
+	{
+		var markdown_container = document.getElementById('pr-markdown-container');
+		var textarea = document.getElementById('pr-markdown');
+		textarea.value = "";
+
+		var placeholder_not_applicable = "Not applicable.";
+		var placeholder_not_populated = "None.";
+
+		// what this PR includes
+		textarea.value += "# This Pull Request includes\n";
+
+		var is_feature = document.getElementById("is-feature").checked;
+		textarea.value += "- [" + (is_feature ? "X" : " ") + "] New feature\n";
+
+		var is_bugfix = document.getElementById("is-bugfix").checked;
+		textarea.value += "- [" + (is_bugfix ? "X" : " ") + "] Bug fix\n";
+
+
+		var is_improvement = document.getElementById("is-improvement").checked;
+		textarea.value += "- [" + (is_improvement ? "X" : " ") + "] Improvement\n";
+
+		var is_analytics = document.getElementById("is-analytics").checked;
+		textarea.value += "- [" + (is_analytics ? "X" : " ") + "] Analytics\n";
+
+		var is_content_update = document.getElementById("is-content-update").checked;
+		textarea.value += "- [" + (is_content_update ? "X" : " ") + "] Content Update";
+
+		textarea.value += "\n\n";
+
+		// summary
+		textarea.value += "# Summary\n";
+		var pr_summary = document.getElementById("pr-summary").value;
+		if (pr_summary != "") {
+			textarea.value += pr_summary;
+		} else {
+			textarea.value += placeholder_not_populated;
+		}
+		textarea.value += "\n\n";
+
+		// proposed solution
+		textarea.value += "# Proposed Solution\n";
+		var pr_proposed_solution = document.getElementById("pr-proposed-solution").value;
+		if (pr_proposed_solution != "") {
+			textarea.value += pr_proposed_solution;
+		} else {
+			textarea.value += placeholder_not_applicable;
+		}
+		textarea.value += "\n\n";
+
+		// changes
+		textarea.value += "# Changes\n";
+		var pr_changes = document.getElementById("pr-changes").value;
+		if (pr_changes != "") {
+			textarea.value += pr_changes;
+		} else {
+			textarea.value += placeholder_not_applicable;
+		}
+		textarea.value += "\n\n";
+
+		// notes
+		textarea.value += "# Notes\n";
+		var pr_notes = document.getElementById("pr-notes").value;
+		if (pr_notes != "") {
+			textarea.value += pr_notes;
+		} else {
+			textarea.value += placeholder_not_populated;
+		}
+		textarea.value += "\n\n";
+
+		// screenshots
+		textarea.value += "# Screenshots\n";
+		textarea.value += placeholder_not_populated;
+
+		markdown_container.style.display = "block";
+		markdown_container.scrollIntoView();
+	}
+
+	function copyToClipboard()
+	{
+  		let textarea = document.getElementById("pr-markdown");
+  		textarea.select();
+  		document.execCommand("copy");
+	}
+
+	function onInput()
+	{
+		let pr_summary = document.getElementById("pr-summary").value;
+		let markdown_btn = document.getElementById('generate_markdown_btn');
+		markdown_btn.disabled = pr_summary == "";
+	}
+
+	</script>
+</script>
+</head>
+</br>
+<div style="width:50%; margin-left: auto; margin-right: auto;">
+
+	<h1>Pull Request Template</h1>
+	<h4>for Enterprise/Alamo Mobile Apps</h4>
+
+	</br></br>
+
+	<form id="frm">
+
+		<div class="form-group">
+			<label>This Pull Request includes</label>
+			<div class="checkbox">
+				<label><input type="checkbox" id="is-feature" value="">New feature</label>
+		  	</div>
+    		<div class="checkbox">
+      			<label><input type="checkbox" id="is-bugfix" value="">Bug fix</label>
+    		</div>
+			<div class="checkbox">
+      			<label><input type="checkbox" id="is-improvement" value="">Improvement</label>
+    		</div>
+			<div class="checkbox">
+				<label><input type="checkbox" id="is-analytics" value="">Analytics</label>
+		  	</div>
+		  	<div class="checkbox">
+				<label><input type="checkbox" id="is-content-update" value="">Content Update</label>
+	  		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputText">Summary (required)</label>
+			<textarea class="form-control" rows="4" id="pr-summary" oninput="onInput()" placeholder="Summarize the issue, feature or improvement. (the reason for creating this pull request)"></textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="inputText">Proposed Solution (optional)</label>
+			<textarea class="form-control" rows="4" id="pr-proposed-solution" oninput="onInput()" placeholder="Describe the adopted solution if applicable."></textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="inputText">Changes (optional)</label>
+			<textarea class="form-control" rows="4" id="pr-changes" oninput="onInput()" placeholder="Describe the main changes if you think it is needed."></textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="inputText">Dev Notes (optional)</label>
+			<textarea class="form-control" rows="4" id="pr-notes" oninput="onInput()" placeholder="Impacts (side effects), steps to reproduce the issue, steps to check the feature or other notes that may help in the pull request review."></textarea>
+		</div>
+
+		<button type="button" class="btn btn-primary" id="generate_markdown_btn" onclick="generateMarkdown()" disabled>Generate Markdown</button>
+
+	</form>
+
+	<div class="form-group" id="pr-markdown-container" style="display: none">
+		<h3 id="pr-markdown-title">PR Markdown</h3>
+		<textarea class="form-control" rows="22" id="pr-markdown" placeholder="This is where you gonna copy the text."></textarea>
+		<div align="right"><button type="button" class="btn btn-secondary" onclick="copyToClipboard()">Copy to clipboard</button></div>
+	</div>
+
+	</br>
+
+</div>
+</body>
+</html>
+
+<!--
+# This Pull Request includes
+- [X] New feature
+- [ ] Bug fix
+- [X] Improvement
+- [ ] Analytics
+- [ ] Content Update
+
+# Summary
+
+# Proposed Solution
+
+# Changes
+
+# Notes
+
+-->
