@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.alamo",
+    "sha256_cert_fingerprints":
+    ["3C:A6:F5:B2:39:AA:56:EA:36:91:75:88:92:41:F4:68:DF:86:F0:14:F9:88:DF:8B:0D:0A:5C:87:95:4A:41:C6"]
+  }
+}]
