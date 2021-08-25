@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
-                "paths": [ "/alamo/login" ]
+                "paths": [ "/alamo/*" ]
             }
         ]
     }
