@@ -4,7 +4,12 @@
         "details": [
             {
                 "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
-                "paths": [ "/alamo/*" ]
+                "paths": [ "/alamo/*/alamo-insiders/sign-in.html" ],
+		"components": [
+		    {
+		        "/": "/alamo/*/alamo-insiders/sign-in.html"
+		    }
+		]
             }
         ]
     }
