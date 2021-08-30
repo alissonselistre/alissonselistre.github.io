@@ -26,9 +26,13 @@
 	  <h1>Alamo App - Deep Linking Tests</h1>
 		<br><br>
 
-		<p><a href="en/alamo-insiders/sign-in.html">Fake Login Page</a></p>
-		<p><a href="forgot_password.html">Fake Forgot Password Page</a></p>
-		<p><a href="forgot_password.html?stop=ResetPassword">Fake Forgot Password Page (with parameter "flow=ResetPassword")</a></p>
+		<p><h3>Fake Pages</h3></p>
+		<p><a href="en/alamo-insiders/sign-in.html">Login Page</a></p>
+
+		<p><a href="deeplink.html">Deeplink Page</a></p>
+		<p><a href="deeplink.html?token=ZxktnAdKVU4yMDIa">Deeplink Page (with token param)</a></p>
+		<p><a href="deeplink.html?stop=SomethingElse&token=ZxktnAdKVU4yMDIa">Deeplink Page  (with "token" and wrong "stop" param)</a></p>
+		<p><a href="deeplink.html?stop=ResetPassword&token=ZxktnAdKVU4yMDIa">Deeplink Page  (with "token" and correct "stop" param)</a></p>
 	
 	  </center>
 	
