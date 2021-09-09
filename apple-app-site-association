@@ -1,20 +1,30 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
-                "paths": [ "/alamo/*/alamo-insiders/sign-in.html", "/alamo/*/deeplink.html" ],
-                "components": [
-                    {
-                        "/": "/alamo/*/alamo-insiders/sign-in.html"
-                    },
-                    {
-                        "/": "/alamo/*/deeplink.html",
-                        "?": { "stop": "ResetPassword", "token": "*" }
-                    }
-                ]
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
+        "paths": [
+          "/*/alamo-insiders/sign-in.html",
+          "/*/alamo-insiders.html",
+          "/*/deeplink.html"
+        ],
+        "components": [
+          {
+            "/": "/*/alamo-insiders/sign-in.html"
+          },
+          {
+            "/": "/*/alamo-insiders.html"
+          },
+          {
+            "/": "/*/deeplink.html",
+            "?": {
+              "stop": "ResetPassword",
+              "token": "*"
             }
+          }
         ]
-    }
+      }
+    ]
+  }
 }
