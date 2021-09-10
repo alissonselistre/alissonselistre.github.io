@@ -5,19 +5,19 @@
       {
         "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
         "paths": [
-          "/*/alamo-insiders/sign-in.html",
-          "/*/alamo-insiders.html",
-          "/*/deeplink.html"
+          "/alamo/*/alamo-insiders/sign-in.html",
+          "/alamo/*/alamo-insiders.html",
+          "/alamo/*/deeplink.html"
         ],
         "components": [
           {
-            "/": "/*/alamo-insiders/sign-in.html"
+            "/": "/alamo/*/alamo-insiders/sign-in.html"
           },
           {
-            "/": "/*/alamo-insiders.html"
+            "/": "/alamo/*/alamo-insiders.html"
           },
           {
-            "/": "/*/deeplink.html",
+            "/": "/alamo/*/deeplink.html",
             "?": {
               "stop": "ResetPassword",
               "token": "*"
