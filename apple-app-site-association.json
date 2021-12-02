@@ -1,131 +1,61 @@
 {
-  "applinks": {
-    "apps": [],
-    "details": [
+  "applinks" : {
+    "apps" : [],
+    "details" : [
       {
-        "appID": "TL76Q6ELX9.com.isobar.alamo.alamomobile",
-        "paths": [
-          "/*/alamo-insiders/sign-in.html",
-          "/*/alamo-insiders/iniciar-sesion.html",
-          "/*/alamo-insiders/entrar.html",
-          "/*/car-rental/insider.html",
-          "/*/alamo-insiders.html",
-          "/*/deeplink.html"
-        ],
-        "components": [
-          {
-            "/": "/*/alamo-insiders/sign-in.html"
-          },
-          {
-            "/": "/*/alamo-insiders/iniciar-sesion.html"
-          },
-          {
-            "/": "/*/alamo-insiders/entrar.html"
-          },
-          {
-            "/": "/*/car-rental/insider.html"
-          },
-          {
-            "/": "/*/alamo-insiders.html"
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "token": "*"
-            }
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "code": "*"
-            }
-          }
+        "appID" : "TL76Q6ELX9.com.ehi.Enterprise",
+        "paths" : [
+          "/en/car-rental/deals/featured/*",
+          "/en/car-rental/deals/global/*",
+          "/en/car-rental/deals/email/*",
+          "/es/car-rental/deals/featured/*",
+          "/es/car-rental/deals/global/*",
+          "/es/car-rental/deals/email/*",
+          "/fr/car-rental/deals/featured/*",
+          "/fr/car-rental/deals/global/*",
+          "/fr/car-rental/deals/email/*"
         ]
       },
       {
-        "appID": "3A697WC9UJ.com.alamo.alamomobile",
-        "paths": [
-          "/*/alamo-insiders/sign-in.html",
-          "/*/alamo-insiders/iniciar-sesion.html",
-          "/*/alamo-insiders/entrar.html",
-          "/*/car-rental/insider.html",
-          "/*/alamo-insiders.html",
-          "/*/deeplink.html"
-        ],
-        "components": [
-          {
-            "/": "/*/alamo-insiders/sign-in.html"
-          },
-          {
-            "/": "/*/alamo-insiders/iniciar-sesion.html"
-          },
-          {
-            "/": "/*/alamo-insiders/entrar.html"
-          },
-          {
-            "/": "/*/car-rental/insider.html"
-          },
-          {
-            "/": "/*/alamo-insiders.html"
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "token": "*"
-            }
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "code": "*"
-            }
-          }
+        "appID" : "3SB2TF8M6V.com.enterprise.eracmobile",
+        "paths" : [
+          "/en/car-rental/deals/featured/*",
+          "/en/car-rental/deals/global/*",
+          "/en/car-rental/deals/email/*",
+          "/es/car-rental/deals/featured/*",
+          "/es/car-rental/deals/global/*",
+          "/es/car-rental/deals/email/*",
+          "/fr/car-rental/deals/featured/*",
+          "/fr/car-rental/deals/global/*",
+          "/fr/car-rental/deals/email/*"
         ]
       },
       {
-        "appID": "3SB2TF8M6V.com.alamo.mobile",
-        "paths": [
-          "/*/alamo-insiders/sign-in.html",
-          "/*/alamo-insiders/iniciar-sesion.html",
-          "/*/alamo-insiders/entrar.html",
-          "/*/car-rental/insider.html",
-          "/*/alamo-insiders.html",
-          "/*/deeplink.html"
-        ],
-        "components": [
-          {
-            "/": "/*/alamo-insiders/sign-in.html"
-          },
-          {
-            "/": "/*/alamo-insiders/iniciar-sesion.html"
-          },
-          {
-            "/": "/*/alamo-insiders/entrar.html"
-          },
-          {
-            "/": "/*/car-rental/insider.html"
-          },
-          {
-            "/": "/*/alamo-insiders.html"
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "token": "*"
-            }
-          },
-          {
-            "/": "/*/deeplink.html",
-            "?": {
-              "stop": "ResetPassword",
-              "code": "*"
-            }
-          }
+        "appID" : "3A697WC9UJ.com.enterprise.enterprisemobile",
+        "paths" : [
+          "/en/car-rental/deals/featured/*",
+          "/en/car-rental/deals/global/*",
+          "/en/car-rental/deals/email/*",
+          "/es/car-rental/deals/featured/*",
+          "/es/car-rental/deals/global/*",
+          "/es/car-rental/deals/email/*",
+          "/fr/car-rental/deals/featured/*",
+          "/fr/car-rental/deals/global/*",
+          "/fr/car-rental/deals/email/*"
+        ]
+      },
+      {
+        "appID" : "HR3UCJF3SX.com.enterprise.enterprisemobile123",
+        "paths" : [
+          "/en/car-rental/deals/featured/*",
+          "/en/car-rental/deals/global/*",
+          "/en/car-rental/deals/email/*",
+          "/es/car-rental/deals/featured/*",
+          "/es/car-rental/deals/global/*",
+          "/es/car-rental/deals/email/*",
+          "/fr/car-rental/deals/featured/*",
+          "/fr/car-rental/deals/global/*",
+          "/fr/car-rental/deals/email/*"
         ]
       }
     ]
