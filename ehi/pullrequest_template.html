@@ -40,9 +40,6 @@
 		var is_analytics = document.getElementById("is-analytics").checked;
 		textarea.value += "- [" + (is_analytics ? "X" : " ") + "] Analytics\n";
 
-		var is_content_update = document.getElementById("is-content-update").checked;
-		textarea.value += "- [" + (is_content_update ? "X" : " ") + "] Content Update";
-
 		textarea.value += "\n\n";
 
 		// summary
@@ -114,7 +111,7 @@
 <div style="width:50%; margin-left: auto; margin-right: auto;">
 
 	<h1>Pull Request Template</h1>
-	<h4>for Enterprise/Alamo Mobile Apps</h4>
+	<h4>for Enterprise Mobile Apps</h4>
 
 	</br></br>
 
@@ -134,9 +131,6 @@
 			<div class="checkbox">
 				<label><input type="checkbox" id="is-analytics" value="">Analytics</label>
 		  	</div>
-		  	<div class="checkbox">
-				<label><input type="checkbox" id="is-content-update" value="">Content Update</label>
-	  		</div>
 		</div>
 
 		<div class="form-group">
