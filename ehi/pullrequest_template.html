@@ -40,6 +40,9 @@
 		var is_analytics = document.getElementById("is-analytics").checked;
 		textarea.value += "- [" + (is_analytics ? "X" : " ") + "] Analytics\n";
 
+		var is_other = document.getElementById("is-other").checked;
+		textarea.value += "- [" + (is_other ? "X" : " ") + "] Other\n";
+
 		textarea.value += "\n\n";
 
 		// summary
@@ -113,12 +116,21 @@
 	<h1>Pull Request Template</h1>
 	<h4>for Enterprise Mobile Apps</h4>
 
-	</br></br>
+	</br>
+	<h5 class="text-danger">Checklist before the pull request submission</h5>
+	<ul class="text-danger">
+		<li>review ticket's acceptance criteria</li>
+		<li>review ticket's designs</li>
+		<li>test iOS and Android</li>
+		<li>test in different screen sizes</li>
+		<li>attach screenshots/gifs/videos when applicable</li>
+	</ul>
+	</br>
 
 	<form id="frm">
 
 		<div class="form-group">
-			<label>This Pull Request includes</label>
+			<label>This Pull Request Includes</label>
 			<div class="checkbox">
 				<label><input type="checkbox" id="is-feature" value="">New feature</label>
 		  	</div>
@@ -131,10 +143,13 @@
 			<div class="checkbox">
 				<label><input type="checkbox" id="is-analytics" value="">Analytics</label>
 		  	</div>
+			  <div class="checkbox">
+				<label><input type="checkbox" id="is-other" value="">Other</label>
+		  	</div>
 		</div>
 
 		<div class="form-group">
-			<label for="inputText">Summary (required)</label>
+			<label for="inputText">Summary <small>(required)</small></label>
 			<textarea class="form-control" rows="4" id="pr-summary" oninput="onInput()" placeholder="Summarize the issue, feature or improvement. (the reason for creating this pull request)"></textarea>
 		</div>
 
@@ -175,7 +190,7 @@
 - [ ] Bug fix
 - [X] Improvement
 - [ ] Analytics
-- [ ] Content Update
+- [ ] Other
 
 # Summary
 
@@ -184,5 +199,7 @@
 # Changes
 
 # Notes
+
+# Screenshots
 
 -->
