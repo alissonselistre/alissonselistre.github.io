@@ -1,0 +1,128 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Confirm Modify Deeplink Generator</title>
+	<meta name="description" content="A helper tool to generate the Confirm Modify Deeplinks">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+		integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+		integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+		integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+		crossorigin="anonymous"></script>
+	<script>
+
+		function generateDeeplink() {
+			let api_key_input_value = document.getElementById("api_key_input").value;
+			let first_name_input_value = document.getElementById("first_name_input").value;
+			let last_name_input_value = document.getElementById("last_name_input").value;
+			let ticket_number_input_value = document.getElementById("ticket_number_input").value;
+
+			var requestBody = {
+				"token_input": {
+					"first_name": first_name_input_value,
+					"last_name": last_name_input_value,
+					"ticket_number": ticket_number_input_value
+				}
+			};
+			var jsonBody = JSON.stringify(requestBody);
+
+			var apiUrl = 'https://www-gbo-rental-rcxqa.gbo.csdev.ehiaws-nonprod.com/gbo-rental/api/v2/secure/enterprise/web/encrypt';
+
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", apiUrl, true);
+			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader("Accept-Language", "en_US");
+			xhr.setRequestHeader("Accept", "*/*");
+			xhr.setRequestHeader("Country-Of-Residence-Code", "US");
+			xhr.setRequestHeader("Ehi-API-Key", api_key_input_value);
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+
+					//TODO: parse properly the response
+
+					console.log(xhr.responseText);
+
+					var deeplink_container = document.getElementById('deeplink_container');
+					var deeplink_textarea = document.getElementById('deeplink_textarea');
+					deeplink_textarea.value = xhr.responseText;
+
+					deeplink_container.style.display = "block";
+					deeplink_container.scrollIntoView();
+				}
+			};
+
+			xhr.send(jsonBody);
+		}
+
+		function copyToClipboard() {
+			let deeplink_textarea = document.getElementById("deeplink_textarea");
+			deeplink_textarea.select();
+			document.execCommand("copy");
+		}
+
+		function onInput() {
+			let api_key_input_value = document.getElementById("api_key_input").value;
+			let first_name_input_value = document.getElementById("first_name_input").value;
+			let last_name_input_value = document.getElementById("last_name_input").value;
+			let ticket_number_input_value = document.getElementById("ticket_number_input").value;
+
+			let generate_deeplink_button = document.getElementById('generate_deeplink_button');
+			generate_deeplink_button.disabled = api_key_input_value == "" || first_name_input_value == "" || last_name_input_value == "" || ticket_number_input_value == "";
+		}
+
+	</script>
+	</script>
+</head>
+</br>
+<div style="width:50%; margin-left: auto; margin-right: auto;">
+
+	<h1>Deeplink Generator</h1>
+	<h4>for Confirm Modify</h4>
+
+	<br>
+
+	<form id="frm">
+
+		<div class="form-group">
+			<label for="api_key_input">GBO API Key</label>
+			<input type="text" class="form-control" id="api_key_input" oninput="onInput()" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="first_name_input">First Name</label>
+			<input type="text" class="form-control" id="first_name_input" oninput="onInput()" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="last_name_input">Last Name</label>
+			<input type="text" class="form-control" id="last_name_input" oninput="onInput()" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="ticket_number_input">Ticket Number</label>
+			<input type="text" class="form-control" id="ticket_number_input" oninput="onInput()" placeholder="">
+		</div>
+
+		<button type="button" class="btn btn-primary" id="generate_deeplink_button" onclick="generateDeeplink()"
+			disabled>Generate Deeplink</button>
+
+	</form>
+
+	<div class="form-group" id="deeplink_container" style="display: none">
+		<h3>Generated deeplink:</h3>
+		<textarea class="form-control" rows="22" id="deeplink_textarea" placeholder=""></textarea>
+		<div align="right"><button type="button" class="btn btn-secondary" onclick="copyToClipboard()">Copy to
+				clipboard</button></div>
+	</div>
+
+	</br>
+
+</div>
+</body>
+
+</html>
